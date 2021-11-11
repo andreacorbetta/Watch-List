@@ -1,0 +1,7 @@
+<%= form_for(@list) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<% end %>
+
+<br>
+<%= link_to 'Back to index', lists_path, class: "btn btn-primary" %>
