@@ -1,0 +1,8 @@
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.association :movie, as: :select %>
+  <%= f.input :comment, placeholder: 'Enter a comment' %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<br>
+<%= link_to 'Back to list', list_path(@list), class: "btn btn-primary" %>
