@@ -1,6 +1,6 @@
-<%= form_for(@list) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= simple_form_for(@list) do |f| %>
+  <%= f.input :name, placeholder: 'Enter your list name' %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 
 <br>
