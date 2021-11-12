@@ -1,10 +1,15 @@
-<h1>Movie lists</h1>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1568876694728-451bbf694b83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>Choose your poison</p>
+    <%= link_to 'Add a new list', new_list_path, class: "btn btn-ghost" %>
+  </div>
+</div>
+
+<div class="cards">
   <% @lists.each do |list| %>
-    <li>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1505775561242-727b7fba20f0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80)">
       <%= link_to list.name, list_path(list[:id]) %>
-    </li>
+    </div>
   <% end %>
-</ul>
-<br>
-<%= link_to 'Add a new list', new_list_path, class: "btn btn-primary" %>
+</div>
